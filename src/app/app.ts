@@ -25,7 +25,7 @@ export class App {
       if (this.aOrB() === 'A') {
         return `${this.whatIsA()}-matching.png`;
       } else {
-        return this.whatIsA() === 'male' ? '/female-matching.png' : '/male-matching.png';
+        return this.whatIsA() === 'male' ? 'female-matching.png' : 'male-matching.png';
       }
     }
     return 'assets/foo.png';

@@ -69,12 +69,9 @@ h2 {
     position: relative;
   }
   .content {
-    display: flex;
-    justify-content: space-around;
     width: 100%;
     max-width: 700px;
       margin-bottom: 3rem;
-      flex-wrap: wrap;
   }
 
   .content p {
@@ -95,13 +92,7 @@ button {
     flex-shrink: 0;
 }
   @media screen and (max-width: 650px) {
-    .content {
-      flex-direction: column;
-        width: max-content;
-        flex-wrap: wrap;
-    }
-
-    .divider {
+     .divider {
       height: 1px;
       width: 100%;
       background: var(--red-to-pink-to-purple-horizontal-gradient);
@@ -112,5 +103,10 @@ button {
           width: 75%;
           padding-top: 20px;
           padding-bottom: 20px;
+          min-width: content;
+      }
+
+      img {
+          max-width: 300px;
       }
   }

@@ -2,7 +2,10 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -68,14 +71,23 @@
           "builder": "@angular/build:unit-test"
         },
         "deploy": {
-            "builder": "angular-cli-ghpages:deploy",
-            "options": {
-                "base-href": "/gender-reveal/",
-                "name": "bslbckr",
-                "email": "15678130+bslbckr@users.noreply.github.com",
-                "branch": "gh-pages",
-                "repo": "git@github.com:bslbckr/gender-reveal.git"
-            }
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "base-href": "/gender-reveal/",
+            "name": "bslbckr",
+            "email": "15678130+bslbckr@users.noreply.github.com",
+            "branch": "gh-pages",
+            "repo": "git@github.com:bslbckr/gender-reveal.git"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }

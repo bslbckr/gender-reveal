@@ -1,20 +1,20 @@
 <main class="main">
   <div class="content flex justify-center flex-wrap flex-col md:flex-row gap-2 items-center">
-      @if(whatIsA() == null) {
+      @if(whatIsA() === null) {
       <h2 class="text-black dark:text-white">Welche Gender-ratio beginnt?</h2>
       <button (click)="setWhatIsA('female')">
-          <img src="female-matching.png" />
+          <img src="female-matching.png" alt="WFDF hand-signal for a point being played four female matching players" />
       </button>
       <div class="divider" role="separator" aria-label="Divider"></div>
       <button (click)="setWhatIsA('male')">
-          <img src="male-matching.png" />
+          <img src="male-matching.png" alt="WFDF hand-signal for a point being played with four male matching players" />
       </button>
       }
-      @if(whatIsA() != null) {
+      @if(whatIsA() !== null) {
       <button class="bg-slate-200 dark:bg-neutral-900" (click)="homeScores()">
           <h1>{{scoreHome()}}</h1>
       </button>
-      <img [src]="genderRatioForPoint()" />
+      <img [src]="genderRatioForPoint()" alt="WFDF hand-signal signalling the current point's gender-ratio." />
 
       <button class="bg-slate-200 dark:bg-neutral-900" (click)="awayScores()">
           <h1>{{scoreAway()}}</h1>

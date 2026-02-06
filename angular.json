@@ -68,7 +68,14 @@
           "builder": "@angular/build:unit-test"
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+            "builder": "angular-cli-ghpages:deploy",
+            "options": {
+                "base-href": "/gender-reveal/",
+                "name": "bslbckr",
+                "email": "15678130+bslbckr@users.noreply.github.com",
+                "branch": "gh-pages",
+                "repo": "git@github.com:bslbckr/gender-reveal.git"
+            }
         }
       }
     }

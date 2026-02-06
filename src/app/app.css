@@ -33,7 +33,7 @@
   }
 
  h1 {
-     font-size: 3.125rem;
+     font-size: 5rem;
      color: var(--electric-violet);
      font-weight: 500;
      line-height: 100%;
@@ -43,6 +43,15 @@
      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
      "Segoe UI Symbol";
  }
+
+h2 {
+    font-size: 2rem;
+    margin-left: 1.8em;
+    margin-right: 1.8em;
+    margin-bottom: 2em;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
 
   p {
     margin: 0;
@@ -64,7 +73,8 @@
     justify-content: space-around;
     width: 100%;
     max-width: 700px;
-    margin-bottom: 3rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
   }
 
   .content p {
@@ -82,11 +92,13 @@ button {
     width: 25%;
     border-style: solid;
     border-image-slice: 1;
+    flex-shrink: 0;
 }
   @media screen and (max-width: 650px) {
     .content {
       flex-direction: column;
-      width: max-content;
+        width: max-content;
+        flex-wrap: wrap;
     }
 
     .divider {
